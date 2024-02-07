@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgp883drr777n"]
+
+[ext_resource type="SpriteFrames" uid="uid://dne2bse1qjkxi" path="res://Scenes/Player/idle01.tres" id="1_5ftr4"]
+[ext_resource type="Script" path="res://Scenes/Player/Player.gd" id="1_umtge"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4eh8h"]
+radius = 6.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2md2"]
+size = Vector2(10, 11)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_umtge")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = ExtResource("1_5ftr4")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("CircleShape2D_4eh8h")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_q2md2")

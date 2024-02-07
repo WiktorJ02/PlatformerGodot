@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl48cjqyk7fmu"]
+
+[ext_resource type="TileSet" uid="uid://c4qhm6hyg73qu" path="res://Scenes/Levels/level_1.tres" id="1_kgi1o"]
+[ext_resource type="PackedScene" uid="uid://dgp883drr777n" path="res://Scenes/Player/Player.tscn" id="2_wkfx3"]
+
+[node name="Level_1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_kgi1o")
+format = 2
+layer_0/tile_data = PackedInt32Array(393216, 1, 0, 393217, 65537, 0, 393218, 131073, 0, 393219, 65537, 0, 393220, 131073, 0, 393221, 196609, 0, 458752, 1, 1, 458753, 65537, 1, 458754, 65537, 1, 458755, 65537, 1, 458756, 65537, 1, 458757, 196609, 1, 327688, 1, 1, 393224, 1, 2, 458760, 1, 3, 327689, 65537, 1, 458761, 65537, 3, 393225, 65537, 1, 327690, 65537, 1, 393226, 65537, 1, 458762, 131073, 3, 327691, 65537, 1, 458763, 131073, 3, 458764, 196609, 3, 393227, 65537, 1, 262156, 196609, 0, 327692, 196609, 1, 393228, 196609, 2, 262152, 1, 0, 262153, 65537, 0, 262154, 131073, 0, 262155, 65537, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_wkfx3")]
+position = Vector2(17, 126)
